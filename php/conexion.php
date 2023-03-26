@@ -5,7 +5,7 @@
     $user = "localhost";
     $nombre_usuario = "root";
     $password = "";
-    $nombre_bd = "formulario_db";
+    $nombre_bd = "escuela_db";
 
     // Conexion a base de datos
 

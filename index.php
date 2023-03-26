@@ -19,17 +19,17 @@
 
         <div class="nombre">
           <label for="txtNombre">Nombre</label>
-          <input type="text" id="txtNombre" name="txtNombre" />
+          <input type="text" id="txtNombre" name="txtNombre" pattern="[A-Za-z]+" required />
         </div>
 
         <div class="apellido">
           <label for="txtApellido">Apellido</label>
-          <input type="text" id="txtApellido" name="txtApellido" />
+          <input type="text" id="txtApellido" name="txtApellido" pattern="[A-Za-z]+" required />
         </div>
 
         <div class="curp">
           <label for="txtCurp">Curp</label>
-          <input type="text" id="txtCurp" name="txtCurp" />
+          <input type="text" id="txtCurp" name="txtCurp" require minlength="18" maxlength="18" />
         </div>
 
       </div>
@@ -38,15 +38,15 @@
         <h3>Carreras</h3>
 
         <div class="programacion">
-          <input type="radio" name="carrera" id="brProgramacion" value="Programacion"> <label for="brProgramacion">Tecnico en programacion</label>
+          <input type="radio" name="carrera" id="brProgramacion" value="1"> <label for="brProgramacion">Tecnico en programacion</label>
         </div>
 
         <div class="programacion">
-          <input type="radio" name="carrera" id="brVentas" value="Ventas"> <label for="brVentas">Tecnico en ventas</label>
+          <input type="radio" name="carrera" id="brVentas" value="2"> <label for="brVentas">Tecnico en ventas</label>
         </div>
 
         <div class="programacion">
-          <input type="radio" name="carrera" id="brMyH" value="Maquinas y herramientas"> <label for="brMyH">Tecnico en maquinas y herramientas</label>
+          <input type="radio" name="carrera" id="brMyH" value="3"> <label for="brMyH">Tecnico en maquinas y herramientas</label>
         </div>
       </div>
 
@@ -54,23 +54,23 @@
         <h3>Talleres</h3>
 
         <div class="zonaverde">
-          <input type="checkbox" id="zoneVerde" name="talleres[]" value=" Zona verde"> <label for="cbZonaVerde">Zona verde</label>
+          <input type="checkbox" id="zoneVerde" name="talleres[]" value="1"> <label for="cbZonaVerde">Zona verde</label>
         </div>
 
         <div class="futbol">
-          <input type="checkbox" id="futbol" name="talleres[]" value=" Futbol"> <label for="cbFutbol">Futbol</label>
+          <input type="checkbox" id="futbol" name="talleres[]" value="2"> <label for="cbFutbol">Futbol</label>
         </div>
 
         <div class="basquetball">
-          <input type="checkbox" id="basquet" name="talleres[]" value=" Basquetball"> <label for="cbBasquet">Basquetball</label>
+          <input type="checkbox" id="basquet" name="talleres[]" value="3"> <label for="cbBasquet">Basquetball</label>
         </div>
 
         <div class="ajedrez">
-          <input type="checkbox" id="ajedrez" name="talleres[]" value=" Ajedrez"> <label for="cbAjedrez">Ajedrez</label>
+          <input type="checkbox" id="ajedrez" name="talleres[]" value="4"> <label for="cbAjedrez">Ajedrez</label>
         </div>
 
         <div class="musica">
-          <input type="checkbox" id="musica" name="talleres[]" value=" Musica"> <label for="cbMusica">Musica</label>
+          <input type="checkbox" id="musica" name="talleres[]" value="5"> <label for="cbMusica">Musica</label>
         </div>
       </div>
 

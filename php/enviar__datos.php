@@ -2,45 +2,54 @@
 
 include 'conexion.php';
 
+// Variables
 $nombre = $_POST['txtNombre'];
-$apellido = $_POST['txtApellido'];
+$apellidos = $_POST['txtApellido'];
 $curp = $_POST['txtCurp'];
+$talleres = $_POST['talleres'];
 $comentarios = $_POST['txtComentarios'];
 
-$talleres = $_POST['talleres'];
-
-$taller = "";
-
-foreach($talleres as $item) {
-     $taller = $item + $taller;
-}
-
-if(isset($_POST['carrera'])){
-    $carrera = $_POST['carrera'];
+// Verifica que se haya seleccionado una carrera de no ser asi nos manda un mnsj
+if (isset($_POST['carrera'])) {
+    $id_carrera = $_POST['carrera'];
 } else {
-    $carrera = null;
+    echo '
+            <script> 
+                alert("Seleccione una carrera");
+                window.location = "../index.php";
+            </script>
+        ';
 }
 
-$query = "INSERT INTO datos (curp, nombre, apellido, carrera, talleres, comentarios) VALUES ('$curp', '$nombre', '$apellido', '$carrera', '$item', '$comentarios')";
+$query = "INSERT INTO alumnos (curp_alumno, nombre_alumno, apellidos_alumno, id_carrera) VALUES ('$curp', '$nombre', '$apellidos', '$id_carrera')";
 
 $ejecutar = mysqli_query($conexion, $query);
 
 if ($ejecutar) {
-    echo $item;
-    echo '
-            <script> 
-                alert("Alumno Registrado");
-                window.location = "../index.php";
-            </script>
-        ';
+
+    foreach ($talleres as $item) {
+        $query = "INSERT INTO alumnoxtaller (curp, id_taller) VALUES ('$curp', $item)";
+        $ejecutar = mysqli_query($conexion, $query);
+    }
+
+    if ($ejecutar) {
+
+        $query = "INSERT INTO comentarios (comentario, curp_alumno) VALUES ('$comentarios', '$curp')";
+        $ejecutar = mysqli_query($conexion, $query);
+    }
 } else {
     echo $item;
     echo '
             <script> 
                 alert("Intentelo de nuevo, alumno no registrado");
-                
+                window.location = "../index.php";
             </script> 
         ';
 }
-//window.location = "../index.php";
+
+// <script> 
+//                 alert("Alumno Registrado");
+//                 window.location = "../index.php";
+//             </script>
+
 mysqli_close($conexion);
