@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2023 a las 01:14:01
+-- Tiempo de generación: 27-03-2023 a las 02:30:51
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.30
 
@@ -39,7 +39,8 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`curp_alumno`, `nombre_alumno`, `apellidos_alumno`, `id_carrera`) VALUES
-('oera061014hmcrdxa2', 'Axel', 'Daniel', 1);
+('OERA061014HMCRDXA2', 'AXEL', 'ORTEGA', 1),
+('ROMJ830608MDFDNN02', 'German', 'Raul', 2);
 
 -- --------------------------------------------------------
 
@@ -57,8 +58,10 @@ CREATE TABLE `alumnoxtaller` (
 --
 
 INSERT INTO `alumnoxtaller` (`curp`, `id_taller`) VALUES
-('oera061014hmcrdxa2', 1),
-('oera061014hmcrdxa2', 3);
+('OERA061014HMCRDXA2', 1),
+('OERA061014HMCRDXA2', 3),
+('ROMJ830608MDFDNN02', 2),
+('ROMJ830608MDFDNN02', 5);
 
 -- --------------------------------------------------------
 
@@ -97,7 +100,8 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`id_comentario`, `comentario`, `curp_alumno`) VALUES
-(1, 'Ejemplo xd', 'oera061014hmcrdxa2');
+(1, 'XD', 'OERA061014HMCRDXA2'),
+(2, 'Soy un tecnico en ventas', 'ROMJ830608MDFDNN02');
 
 -- --------------------------------------------------------
 
@@ -172,7 +176,7 @@ ALTER TABLE `carrera`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `taller`

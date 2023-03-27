@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor__formulario {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor__datos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.contenedor__datos h3{
+    text-align: center;
+}
+
+.contenedor__datos label{
+    padding-right: 20px;
+}
+
+.contenedor__datos input {
+    outline: unset;
+    padding: 15px;
+    margin-top: 10px;
+    width: 300px;
+    border: 1px solid rgba(20,20,20,.5);
+    border-radius: 20px;
+}
+
+.contenedor__formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor__ct {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor__ct .contenedor__carreras {
+    padding-right: 10px;
+}
+
+.contenedor__comentarios textarea {
+    outline: unset;
+    padding: 15px;
+    margin-top: 10px;
+    width: 300px;
+    border: 1px solid rgba(20,20,20,.5);
+    border-radius: 20px;
+}
+
+.contenedor__formulario button {
+    padding: 15px;
+    margin-top: 10px;
+    width: 100;
+    border: 1px solid rgba(20,20,20,.5);
+    border-radius: 20px;
+}
+
+.contenedor__formulario button:hover {
+    padding: 15px;
+    margin-top: 10px;
+    width: 100;
+    border: 1px solid rgba(20,20,20,.5);
+    border-radius: 20px;
+    cursor: pointer;
+}
